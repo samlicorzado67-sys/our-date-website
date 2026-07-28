@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Can We Go Out?</title>
+    <link rel="stylesheet" href="submit.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Can We Go On a Date? </h1>
+
+    <p>I really like you.<br>dw set mo nalang kung kaylan HAHAHA</p>
+
+    <div class="buttons">
+        <button class="yes" onclick="location.href='date.html'">Yes:)</button>
+        <button class="no">No :(</button>
+    </div>
+
+</div>
+
+<link rel="stylesheet" href="submit.css">
+
+<script src="submit.js"></script>
+
+<audio id="bgMusic" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("bgMusic");
+
+music.volume = 0.4;
+
+// Try to play the music
+music.play().catch(() => {
+    document.addEventListener("click", () => {
+        music.play();
+    }, { once: true });
+});
+</script>
+
+</body>
+</html>

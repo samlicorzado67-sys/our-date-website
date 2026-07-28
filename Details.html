@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Date Details </title>
+
+    <link rel="stylesheet" href="details.css">
+</head>
+<body>
+
+<div class="container">
+
+    <h1> Select the one that you like </h1>
+
+
+    <form action="success.html">
+
+        <label>Date</label>
+        <input type="date" required>
+
+        <label>Time</label>
+        <input type="time" required>
+
+        <label>Place</label>
+
+        <select required>
+            <option value="">Choose a place</option>
+            <option>SM Mall</option>
+            <option>Coffee Shop </option>
+            <option>Movie Theater </option>
+            <option>Restaurant ️</option>
+            <option>Park </option>
+            <option>Ice Cream Shop</option>
+            <option>Your Choice️:)</option>
+        </select>
+
+        <label>Anything you'd like to do?</label>
+
+        <textarea
+            rows="4"
+            placeholder="Example: Watch a movie, eat together, walk around..."
+        ></textarea>
+
+        <button type="submit">
+            Confirm
+        </button>
+
+    </form>
+
+</div>
+
+<link rel="stylesheet" href="style.css">
+
+<audio id="bgMusic" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("bgMusic");
+
+music.volume = 0.4;
+
+// Try to play the music
+music.play().catch(() => {
+    document.addEventListener("click", () => {
+        music.play();
+    }, { once: true });
+});
+</script>
+
+</body>
+</html>

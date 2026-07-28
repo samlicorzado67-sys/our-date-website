@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Choose a Date lol</title>
+
+    <link rel="stylesheet" href="date.css">
+</head>
+
+<body>
+
+<div class="container">
+
+    <h1>Yay!</h1>
+
+    <p>okay malapit na matapos<br>Select a date muna pls</p>
+
+    <form action="Details.html">
+
+        <input type="date" required>
+
+        <br><br>
+
+        <button type="submit">
+            Confirm Date 
+        </button>
+
+    </form>
+
+</div>
+
+<audio id="bgMusic" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<script>
+const music = document.getElementById("bgMusic");
+
+music.volume = 0.4;
+
+// Try to play the music
+music.play().catch(() => {
+    document.addEventListener("click", () => {
+        music.play();
+    }, { once: true });
+});
+</script>
+
+</body>
+</html>
+
